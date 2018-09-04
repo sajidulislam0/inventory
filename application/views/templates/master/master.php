@@ -22,13 +22,76 @@
 
 
     <body>
+        <div class="container-fluid main_container">
+            <div class="row">
+                <div class="col-md-2 p-0">
+                    <aside class="sidebar-left-collapse">
+                        <a href="#" class="company-logo">Logo</a>
+                        <div class="sidebar-links">
+                            <div class="link-blue selected">
+                                <a href="#">
+                                    <i class="fab fa-product-hunt"></i>Products
+                                </a>
+                                <ul class="sub-links">
+                                    <li><a href="#">Portraits</a></li>
+                                    <li><a href="#">Landscape</a></li>
+                                    <li><a href="#">Studio shots</a></li>
+                                    <li><a href="#">Macros</a></li>
+                                </ul>
+                            </div>
+                            <div class="link-red">
+                                <a href="#">
+                                    <i class="fa fa-heart-o"></i>Favorites
+                                </a>
+                                <ul class="sub-links">
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                    <li><a href="#">Link 3</a></li>
+                                    <li><a href="#">Link 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="link-yellow">
+                                <a href="#">
+                                    <i class="fa fa-keyboard-o"></i>Projects
+                                </a>
+                                <ul class="sub-links">
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                    <li><a href="#">Link 3</a></li>
+                                    <li><a href="#">Link 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="link-green">
+                                <a href="#">
+                                    <i class="fas fa-chart-line"></i>Report</a>
+                                <ul class="sub-links">
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                    <li><a href="#">Link 3</a></li>
+                                    <li><a href="#">Link 4</a></li>
+                                </ul>
+                            </div>
 
-        <nav class="navbar navbar-expand-md fixed-top menu-custom">
+                        </div>
+
+                    </aside>
+
+                 
+                </div>
+                <div class="col-md-10 main_content_area">
+				
+                    <nav class="navbar navbar-expand-md fixed-top menu-custom">
+					
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+		<div class="site-buttons d-inline-block back-btn">
+    <button onclick="goBack()" class="btn green font-size"><i class="fa fa-arrow-alt-circle-left"></i> Go Back</button>
+</div>
 
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+	
                 <ul class="navbar-nav m-auto nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="<?= base_url() ?>supplier">Supplier <span class="sr-only">(current)</span></a>
@@ -70,23 +133,23 @@
             </div>
         </nav>
 
-        <main role="main">
+                        <div class="body-wrapper">
 
-            <div class="body-wrapper">
-                <div class="container">
+                                <?= $main_content ?>
 
-                    <?= $main_content ?>
-
+                          
+                        </div>
+                   
                 </div>
             </div>
-        </main>
 
+        </div>
 
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="<?= base_url() ?>public/js/jquery.min.js"></script>
-                <script src="<?= base_url() ?>public/js/fontawesome.min.js"></script>
+        <script src="<?= base_url() ?>public/js/fontawesome.min.js"></script>
 
         <script src="<?= base_url() ?>public/js/jquery.validate.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
@@ -122,6 +185,40 @@
             }
 
         </script>
-         
+        <script type="text/javascript">
+            $(function () {
+                var links = $('.sidebar-links > div');
+
+                links.on('click', function () {
+                    links.removeClass('selected');
+                    $(this).addClass('selected');
+                });
+            });
+        </script>    
+
+
+		<script type="text/javascript">
+		 $(function () {
+		  var windowHeight = window.innerHeight;
+    document.body.style.height = windowHeight + "px";
+
+window.addEventListener("resize",setWindowHeight,false);
+alert(windowHeight);
+		});
+		        </script>
+
+		
+				<script type="text/javascript">
+				$(function () {
+					
+					
+					
+					
+					});
+					
+					
+				</script>
+
+		
     </body>
 </html>
