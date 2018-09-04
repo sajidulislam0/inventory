@@ -23,6 +23,14 @@ main .container{
     box-shadow: inset 0px 0px 15px 0px #f6f5f5;
     border-radius: 5px;
 }
+.custom-radio .custom-control-input:checked~.custom-control-label::before {
+    background-color: #26a69a;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    background-color: #26a69a;
+}
 .main_container,.main_container .row{
 	height:100%;
 }

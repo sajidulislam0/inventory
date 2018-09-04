@@ -22,30 +22,30 @@
                                 <option value="0">Others</option>
                             </select>
                         </div>     
-
-						<div class="form-group col-md-3 product_decrease_width_1">
+                        <div class="form-group col-md-3 product_decrease_width_1">
                             <label for="exampleInputname">Supplier  Name</label>
                             <select name="status" id="status" class="custom-select">
                                 <option value="0">Sajidul Islam</option>
                                 <option value="0">Parves Huda</option>
                             </select>
-                        </div>
-						
+                        </div>		
                         <div class="form-group col-md-2">
                             <label for="exampleInputname">Total Item</label>
                             <select name="status" id="status" class="custom-select">
                                 <option selected="" disabled="">Product Quantity...</option>
-                                <?php $i = 1;
+                                <?php
+                                $i = 1;
                                 while ($i <= 25) {
                                     echo ' <option value="' . $i . '">' . $i . '</option>';
                                     $i++;
-                                } ?>
+                                }
+                                ?>
                             </select>
                         </div>    
 
-						<div class="form-group col-md-2">
+                        <div class="form-group col-md-2">
                             <label for="exampleInputname">Product Unit</label>
-                              <select name="status" id="status" class="custom-select">
+                            <select name="status" id="status" class="custom-select">
                                 <option value="0">Sajidul Islam</option>
                                 <option value="0">Parves Huda</option>
                             </select>
@@ -67,12 +67,45 @@
             </div>
         </form>
     </div>
-
 </div>
 <div class="row mt-5">
     <div class="col-md-12">
         <div class="float-right form-group input-form">
             <input type="text" id="myInput" class="form-control" onkeyup="mySearch()" placeholder="Search for names.." title="Type in a name">
+        </div>
+        <div class="global_search_filter input-form">
+
+            <form method="POST" action="">
+
+                <div class="form-row">
+                    <div class="form-group align-self-end col-md-3">
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" value="advance_search">
+                            <label class="custom-control-label" for="customRadioInline1">Advance Search</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" value="normal_search">
+                            <label class="custom-control-label" for="customRadioInline2">Normal search</label>
+                        </div>
+                    </div>
+ </div>
+
+                    <div id="advance_search_wrapper">
+                         <div class="form-row">
+                        <div class="form-group col-md-2" >
+                            <label for="from_date">From date</label>
+                            <input type="text" id="from_date" class="form-control">                      
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="to_date">To date</label>
+                            <input type="text" id="to_date" class="form-control">
+                        </div>
+                    </div>
+               
+                    </div>
+               
+            </form>
+
         </div>
         <div class="table-responsive">
             <table class="table table-bordered table-striped" id="myTable">
@@ -82,8 +115,7 @@
                         <th>Product Name:</th>
                         <th>Company Name</th>
                         <th>Supplier Name</th>
-                        <th style=" width: 25%; text-align: center;">Price</th>
-   
+                        <th style="width: 25%; text-align: center;">Price</th>
                         <th>Stock Availabity</th>
                         <th>Action</th>
                     </tr>
@@ -95,23 +127,23 @@
                         <td>unilivercompany@gmail.com</td>
                         <td>0174354856</td>
                         <td>
-						<table class="table mb-0">
-						<tr>
-								<td style="text-align: center;">Buy price - 15 Tk / KG</td>
-								<td style="text-align: center;">Sell price - 17 Tk / Pics</td>
-						</tr>
-						</table>
-						</td>
-						 <td>15 /kG In stock</td>
+                            <table class="table mb-0">
+                                <tr>
+                                    <td style="text-align: center;">Buy price - 15 Tk / KG</td>
+                                    <td style="text-align: center;">Sell price - 17 Tk / Pics</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>15 /kG In stock</td>
                         <td align="center">
-						<a href="#" class="btn btn-primary minimum-btn btn-xs"> <i class="fas fa-edit"></i></a>
-						<a href="#" class="btn btn-danger minimum-btn btn-xs"> <i class="fas fa-trash"></i></a>
-						</td>
+                            <a href="#" class="btn btn-primary minimum-btn btn-xs"> <i class="fas fa-edit"></i></a>
+                            <a href="#" class="btn btn-danger minimum-btn btn-xs"> <i class="fas fa-trash"></i></a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
 
-			</div>
+        </div>
         <div>
         </div>
     </div>
