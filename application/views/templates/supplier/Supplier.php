@@ -8,45 +8,35 @@
     <div class="col-md-4">
         <div class="input-form">
             <div class="div-border">
-                <div class="form-group has-feedback clear-both">
-                    <label for="exampleInputname">Name:</label>
+                <div class="form-group">
+                    <label for="exampleInputname">Person Name:</label>
                     <input type="text" id="name" name="name" required="required" class="form-control" placeholder="Name">
 
                 </div>
 
-                <div class="form-group has-feedback clear-both">
 
-                    <label for="exampleInputemail">Email:</label>
-
-                    <input type="email" id="email" name="email"  required="required" class="form-control" placeholder="Email">
+                <div class="form-group">
+                    <label for="exampleInputemail">Company Name</label>
+                    <input type="text" id="phone" name="company_name" class="form-control" placeholder="Phone">
                 </div>
 
-                <div class="form-group has-feedback clear-both">
-                    <label for="exampleInputemail">Phone:</label>
+                <div class="form-group">
+                    <label for="exampleInputemail">Phone </label>
                     <input type="text" id="phone" name="phone" class="form-control" placeholder="Phone">
-                </div>
 
-                <div class="form-group has-feedback clear-both">
-                    <label for="exampleInputemail">Address:</label>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputemail">Address </label>
                     <textarea id="address" name="address" value="" class="form-control" placeholder="Address here.."></textarea>
 
                 </div>
-
-                <div class="form-group has-feedback">
-                    <label for="exampleInputstatus">Status:</label>
-                    <select name="status" id="status" class="form-control">
-                        <option value="1" selected="">Active</option>
-                        <option value="0">DeActive</option>
-                    </select>
-                </div>
-
+               
 
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group has-feedback sub-btn-wdt  pull-left">
-                            <button name="submit_supplier" type="submit" id="submit_supplier" class="btn btn-success btn-sm wdt-bg">Save</button>
-                            <button  type="reset" id="submit_supplier" class="btn btn-danger btn-sm wdt-bg float-right">Reset</button>
-
+                            <button  type="reset" id="submit_supplier" class="btn btn-danger btn-sm wdt-bg ">Reset</button>
+                            <button name="submit_supplier" type="submit" id="submit_supplier" class="btn btn-success btn-sm wdt-bg float-right">Save</button>
                         </div>
                     </div>
                 </div>
@@ -64,9 +54,9 @@
                 <thead>
                     <tr>
                         <th>#SL</th>
-                        <th>Supplier</th>
-                        <th>Email</th>
-                        <th>Phone</th>
+                        <th>Name</th>
+                        <th>C Name</th>
+                        <th>Phone No</th>
                         <th>Address</th>
                         <th>Action</th>
                     </tr>
@@ -78,11 +68,16 @@
                     <tr ondblclick="#">
                         <td>4 <input type="hidden" name="editId" id="" value="4"></td>
                         <td>Uniliver Company</td>
-                        <td>unilivercompany@gmail.com</td>
+                        <td>Sajidul Islam</td>
                         <td>0174354856</td>
                         <td>Mirpur 10 </td>
 
-                        <td align="center"><a href="#" class="btn btn-primary minimum-btn btn-xs"> <i class="fas fa-edit"></i></a></td>
+                        <td align="center">
+                            <a href="#" class="btn btn-primary minimum-btn btn-xs"> <i class="fas fa-edit"></i></a>
+                            <a href="#" class="btn btn-danger minimum-btn btn-xs" onclick="confirm('Are you sure to do this?')"> <i class="far fa-trash-alt"></i></a>
+
+
+                        </td>
 
 
 
@@ -91,7 +86,7 @@
 
                 </tbody>
             </table>
-            <div id="demo"></div>
+            <div id="not_found_error"></div>
         </div>
         <div>
         </div>
