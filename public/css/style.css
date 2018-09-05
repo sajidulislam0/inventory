@@ -23,6 +23,18 @@ main .container{
     box-shadow: inset 0px 0px 15px 0px #f6f5f5;
     border-radius: 5px;
 }
+.sale-report-box{
+       background: #fff;
+    padding: 1em;
+    border-radius: 6px;
+    border: 1px solid #292c2f4a;
+}
+.dashboard-icon{
+    
+}
+.output-table{
+        border-top: 5px solid rgba(186, 184, 184, 0.2784313725490196);
+}
 .custom-radio .custom-control-input:checked~.custom-control-label::before {
     background-color: #26a69a;
 }

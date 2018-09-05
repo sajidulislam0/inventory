@@ -59,12 +59,7 @@
                             <div class="link-green">
                                 <a href="#">
                                     <i class="fas fa-chart-line"></i>Report</a>
-                                <ul class="sub-links">
-                                    <li><a href="#">Link 1</a></li>
-                                    <li><a href="#">Link 2</a></li>
-                                    <li><a href="#">Link 3</a></li>
-                                    <li><a href="#">Link 4</a></li>
-                                </ul>
+                                
                             </div>
                         </div>
                     </aside>
@@ -78,7 +73,7 @@
                             <button onclick="goBack()" class="btn green font-size"><i class="fa fa-arrow-alt-circle-left"></i> Go Back</button>
                         </div>
 
-                        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+<!--                        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
 
                             <ul class="navbar-nav m-auto nav">
                                 <li class="nav-item active">
@@ -116,7 +111,7 @@
                                 <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                             </form>
-                        </div>
+                        </div>-->
                     </nav>
 
                     <div class="body-wrapper">
@@ -204,19 +199,25 @@
         </script>
         <script type="text/javascript">
             $(document).ready(function () {
-              $('#customRadioInline1').on('change', function () {
-                    var t = document.getElementById("customRadioInline1").value;
-                    var advance_field = document.getElementById('advance_search_wrapper');
-                   
-                if (t == 'advance_search'){
-                 
-                     advance_field.style.display = 'block'
-                } else{
-                    advance_field.style.display = 'none'
-                    
+//              $('#customRadioInline1:checked').on(':checked', function () {
+//                    var t = $(this).value;
+//                    var advance_field = document.getElementById('advance_search_wrapper');    
+//                if (t == 'advance_search'){
+//                     advance_field.style.display = 'block'
+//                } else{
+//                    advance_field.style.display = 'none'
+//                }
+//            });
+//          
 
-                }
-            });
+                $('.adv_radio_search .search_radio_wrapper input').change(function () {
+                    var advance_field = document.getElementById('advance_search_wrapper');
+                    if ($('#customRadioInline1').is(':checked') == true) {
+                        advance_field.style.display = 'flex'
+                    } else {
+                        advance_field.style.display = 'none'
+                    }
+                });
             });
         </script>
 

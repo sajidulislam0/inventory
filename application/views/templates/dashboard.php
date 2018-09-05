@@ -1,7 +1,10 @@
 
-<h2 class="text-center">Welcome </h2>
-<h3 class="text-center"> Today is:- <small><?=  date("l jS \of F Y h:i:s A");
-?></small></h3>
+<div class="main_dashboard_wrapper">
+    <div class="col-md-3 sale-report-box">
+        <h4 class="d-inline-block">$5</h4><br>
+        <h3 class="d-inline-block">Sales Today</h3>
+        <span class="dashboard-icon float-right"><i class="fab fa-sellsy fa-3x"></i>
 
-
-<a href="" class="btn btn-lg btn-success align-middle">Start The name of Allah</a>
+</span>
+    </div>
+</div>
